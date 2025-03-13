@@ -54,7 +54,6 @@ section {
   left: 10%;
   opacity: 0;
 }
-
 #touchable-button:hover::before {
   animation: button-hover-animation 0.3s ease-in-out forwards alternate;
 }

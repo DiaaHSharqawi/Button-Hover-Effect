@@ -4,20 +4,19 @@
   align-items: center;
 }
 
-#touchable-button::before {
-  @include perfect-center-flex;
-  content: "touch me !";
-  width: 350px;
-  height: 80px;
-  background-color: $dark-grey;
-  color: $bright-yellow-color;
-  position: absolute;
-  bottom: 25%;
-  left: 10%;
-  opacity: 0;
-}
-
 #touchable-button {
+  &::before {
+    @include perfect-center-flex;
+    content: "touch me !";
+    width: 350px;
+    height: 80px;
+    background-color: $dark-grey;
+    color: $bright-yellow-color;
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    opacity: 0;
+  }
   &:hover::before {
     animation: button-hover-animation 0.3s ease-in-out forwards alternate;
   }
