@@ -1,0 +1,19 @@
+.button-basic {
+  width: 350px;
+  height: 80px;
+  font-size: 18px;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#touchable-button {
+  @extend .button-basic;
+  background-color: $bright-yellow-color;
+  color: black;
+  padding: 18px 80px;
+  position: relative;
+}
