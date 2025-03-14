@@ -1,3 +1,4 @@
-@import "./colors.scss";
-@import "./components/buttons/_touchable-button";
-@import "./components/buttons/_touchable-button-before";
+@import "./shared/colors";
+@import "./components/button/__touchable-button";
+@import "./components/button/__touchable-button-before";
+@import "./components/button/__touchable-button-after.scss";

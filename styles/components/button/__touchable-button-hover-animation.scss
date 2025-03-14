@@ -1,0 +1,21 @@
+@mixin button-hover-animation {
+  animation: button-hover-animation 0.3s ease-in-out forwards alternate;
+}
+
+@keyframes button-hover-animation {
+  0% {
+    bottom: 25%;
+    left: 10%;
+    opacity: 0.1;
+  }
+  50% {
+    bottom: 15%;
+    left: 5%;
+    opacity: 0.4;
+  }
+  100% {
+    bottom: 0%;
+    left: 0%;
+    opacity: 1;
+  }
+}

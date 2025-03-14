@@ -1,0 +1,8 @@
+@mixin button-focus {
+  &:focus::before {
+    display: none;
+  }
+  &:focus {
+    @include button-click-animation;
+  }
+}

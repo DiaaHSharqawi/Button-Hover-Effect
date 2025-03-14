@@ -1,0 +1,28 @@
+@keyframes button-click {
+  0% {
+    width: 350px;
+    height: 80px;
+    opacity: 1;
+  }
+  25% {
+    width: 440px;
+    height: 160px;
+  }
+  50% {
+    width: 530px;
+    height: 320px;
+  }
+  75% {
+    width: 620px;
+    height: 620px;
+  }
+  100% {
+    width: 800px;
+    height: 800px;
+    opacity: 1;
+  }
+}
+
+@mixin button-click-animation {
+  animation: button-click 0.3s ease-in-out forwards 1 alternate;
+}

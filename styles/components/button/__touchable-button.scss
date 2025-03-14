@@ -1,3 +1,8 @@
+@import "./__touchable-button-click-animation.scss";
+@import "./__touchable-button-before";
+@import "./__touchable-button-after";
+@import "./__touchable-button-focus";
+
 .button-basic {
   width: 350px;
   height: 80px;
@@ -16,4 +21,7 @@
   color: black;
   padding: 18px 80px;
   position: relative;
+  @include button-before;
+  @include button-after;
+  @include button-focus;
 }

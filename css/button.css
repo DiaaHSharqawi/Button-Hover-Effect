@@ -1,3 +1,44 @@
+@keyframes button-click {
+  0% {
+    width: 350px;
+    height: 80px;
+    opacity: 1;
+  }
+  25% {
+    width: 440px;
+    height: 160px;
+  }
+  50% {
+    width: 530px;
+    height: 320px;
+  }
+  75% {
+    width: 620px;
+    height: 620px;
+  }
+  100% {
+    width: 800px;
+    height: 800px;
+    opacity: 1;
+  }
+}
+@keyframes button-hover-animation {
+  0% {
+    bottom: 25%;
+    left: 10%;
+    opacity: 0.1;
+  }
+  50% {
+    bottom: 15%;
+    left: 5%;
+    opacity: 0.4;
+  }
+  100% {
+    bottom: 0%;
+    left: 0%;
+    opacity: 1;
+  }
+}
 .button-basic, #touchable-button {
   width: 350px;
   height: 80px;
@@ -16,7 +57,6 @@
   padding: 18px 80px;
   position: relative;
 }
-
 #touchable-button::before {
   display: flex;
   justify-content: center;
@@ -30,9 +70,31 @@
   bottom: 25%;
   left: 10%;
   opacity: 0;
+  z-index: 1;
 }
 #touchable-button:hover::before {
   animation: button-hover-animation 0.3s ease-in-out forwards alternate;
+}
+#touchable-button::after {
+  content: "now get back to work.";
+  font-size: 24px;
+  line-height: 50px;
+  white-space: pre;
+  color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #262e31;
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#touchable-button:focus::before {
+  display: none;
+}
+#touchable-button:focus {
+  animation: button-click 0.3s ease-in-out forwards 1 alternate;
 }
 
 @keyframes button-hover-animation {
