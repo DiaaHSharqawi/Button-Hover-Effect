@@ -1,21 +1,20 @@
-@import "./__touchable-button-hover-animation";
 @import "./../../shared/perfect-center-flex.scss";
+@import "./../../shared/colors.scss";
 
 @mixin button-before {
   &::before {
     @include perfect-center-flex;
+    transition: all 0.5s linear; /* For hover transition */
     content: "touch me !";
     width: 350px;
     height: 80px;
     background-color: $dark-grey;
     color: $bright-yellow-color;
     position: absolute;
-    bottom: 25%;
-    left: 10%;
+    top: 0;
+    right: 0;
+    transform: translate(10%, -25%);
     opacity: 0;
     z-index: 1;
-  }
-  &:hover::before {
-    @include button-hover-animation;
   }
 }

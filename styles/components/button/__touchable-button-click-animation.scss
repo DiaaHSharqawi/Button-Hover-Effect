@@ -2,27 +2,37 @@
   0% {
     width: 350px;
     height: 80px;
-    opacity: 1;
   }
-  25% {
+  10% {
+    width: 395px;
+    height: 120px;
+  }
+  20% {
     width: 440px;
     height: 160px;
   }
-  50% {
+  30% {
+    width: 485px;
+    height: 240px;
+  }
+  40% {
     width: 530px;
     height: 320px;
   }
-  75% {
-    width: 620px;
-    height: 620px;
-  }
+  /* 
+  This is something new I have learned. 
+  It took a long time to find a way to hold the last state (grey state)
+  which will display the text 
+  */
+  50%,
   100% {
-    width: 800px;
-    height: 800px;
-    opacity: 1;
+    width: 575px;
+    height: 470px;
+    color: transparent;
+    background-color: $dark-grey;
   }
 }
 
 @mixin button-click-animation {
-  animation: button-click 0.3s ease-in-out forwards 1 alternate;
+  animation: button-click 3s ease-in-out forwards 2 alternate;
 }
