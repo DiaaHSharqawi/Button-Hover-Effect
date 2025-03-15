@@ -24,7 +24,7 @@
   It took a long time to find a way to hold the last state (grey state)
   which will display the text 
   */
-  50%, 100% {
+  40%, 100% {
     width: 575px;
     height: 470px;
     color: transparent;
@@ -35,8 +35,9 @@
   0% {
     opacity: 0;
   }
-  99% {
-    opacity: 0;
+  50%, 90% {
+    opacity: 1;
+    transform: translate(-50%, 1%);
   }
   100% {
     opacity: 0;
@@ -52,6 +53,7 @@
   letter-spacing: 5px;
   font-weight: bold;
   cursor: pointer;
+  user-select: none;
 }
 
 #touchable-button {
@@ -62,65 +64,65 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 2s ease-in-out 2s; /* TO see the scaling effect of button*/
+  transition: all 3s linear 3s; /* TO see the scaling effect of button*/
 }
-#touchable-button:focus {
-  animation: button-click 3s ease-in-out forwards 2 alternate;
-}
-#touchable-button:focus::before {
-  color: #ffcd00;
-  content: "Good boy!";
-  font-weight: 400;
-  font-size: 28px;
-  text-transform: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 5s linear; /* to make text disappeare after amount of time*/
-}
-#touchable-button:focus::after {
+#touchable-button::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  content: "Now get back to work.";
-  font-size: 24px;
-  line-height: 50px;
-  white-space: pre;
-  color: white;
-  text-transform: none;
-  font-weight: 400;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%);
-  position: absolute;
-  transition: opacity 5s linear; /* to make text disappeare after amount of time*/
-}
-#touchable-button:not(:focus)::before {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s linear; /* For hover transition */
+  transition: transform 0.1s linear; /* For hover transition */
   content: "touch me !";
   width: 350px;
   height: 80px;
   background-color: #262e31;
   color: #ffcd00;
   position: absolute;
-  top: 0;
-  right: 0;
   transform: translate(10%, -25%);
   opacity: 0;
   z-index: 1;
 }
-#touchable-button:not(:focus):hover::before {
-  content: 0;
-  transform: translate(0%, 0%);
-  opacity: 1;
+#touchable-button:focus {
+  animation: button-click 1.5s linear forwards 2 alternate;
 }
 #touchable-button:focus::before {
-  animation: hide-text 5s forwards 5s;
+  display: none;
+}
+#touchable-button:focus::before {
+  color: #ffcd00;
+  content: "Good boy!";
+  width: 100%;
+  height: auto;
+  font-weight: 400;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  display: flex;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  opacity: 0;
+  animation: hide-text 1.5s linear 1s forwards alternate;
 }
 #touchable-button:focus::after {
-  animation: hide-text 5s forwards 5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Now get back to work.";
+  display: flex;
+  font-size: 24px;
+  line-height: 50px;
+  color: white;
+  text-transform: none;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: hide-text 1.5s linear 1s forwards alternate;
+}
+#touchable-button:not(:focus):hover::before {
+  position: absolute;
+  transform: translate(0, 0);
+  opacity: 1;
 }/*# sourceMappingURL=button.css.map */

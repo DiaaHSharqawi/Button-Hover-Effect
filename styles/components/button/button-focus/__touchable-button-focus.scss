@@ -1,0 +1,23 @@
+@import "./_touchable-button-click-animation";
+@import "./__touchable-button-focus-texts";
+@import "./../_touchable-button-before";
+@import "./../../../shared/colors.scss";
+
+@mixin button-focus {
+  @include button-before;
+  &:focus {
+    @include button-click-animation;
+    &::before {
+      display: none;
+    }
+    @include button-focus-texts;
+  }
+
+  &:not(:focus) {
+    &:hover::before {
+      position: absolute;
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}

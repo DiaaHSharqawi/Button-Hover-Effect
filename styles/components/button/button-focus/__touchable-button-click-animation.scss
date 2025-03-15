@@ -24,7 +24,7 @@
   It took a long time to find a way to hold the last state (grey state)
   which will display the text 
   */
-  50%,
+  40%,
   100% {
     width: 575px;
     height: 470px;
@@ -34,5 +34,5 @@
 }
 
 @mixin button-click-animation {
-  animation: button-click 3s ease-in-out forwards 2 alternate;
+  animation: button-click 1.5s linear forwards 2 alternate;
 }

@@ -4,15 +4,13 @@
 @mixin button-before {
   &::before {
     @include perfect-center-flex;
-    transition: all 0.5s linear; /* For hover transition */
+    transition: transform 0.1s linear; /* For hover transition */
     content: "touch me !";
     width: 350px;
     height: 80px;
     background-color: $dark-grey;
     color: $bright-yellow-color;
     position: absolute;
-    top: 0;
-    right: 0;
     transform: translate(10%, -25%);
     opacity: 0;
     z-index: 1;
