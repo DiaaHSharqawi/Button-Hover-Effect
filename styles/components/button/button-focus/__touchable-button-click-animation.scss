@@ -1,0 +1,38 @@
+@keyframes button-click {
+  0% {
+    width: 350px;
+    height: 80px;
+  }
+  10% {
+    width: 395px;
+    height: 120px;
+  }
+  20% {
+    width: 440px;
+    height: 160px;
+  }
+  30% {
+    width: 485px;
+    height: 240px;
+  }
+  40% {
+    width: 530px;
+    height: 320px;
+  }
+  /* 
+  This is something new I have learned. 
+  It took a long time to find a way to hold the last state (grey state)
+  which will display the text 
+  */
+  40%,
+  100% {
+    width: 575px;
+    height: 470px;
+    color: transparent;
+    background-color: $dark-grey;
+  }
+}
+
+@mixin button-click-animation {
+  animation: button-click 1.5s linear forwards 2 alternate;
+}

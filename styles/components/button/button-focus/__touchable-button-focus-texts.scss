@@ -1,0 +1,51 @@
+@import "./../../../shared/colors.scss";
+
+@keyframes hide-text {
+  0% {
+    opacity: 0;
+  }
+  50%,
+  90% {
+    opacity: 1;
+    transform: translate(-50%, 1%);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@mixin button-focus-texts {
+  &::before {
+    color: $bright-yellow-color;
+    content: "Good boy!";
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+    font-size: 28px;
+    text-transform: none;
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    opacity: 0;
+    animation: hide-text 1.5s linear 1s forwards alternate;
+  }
+
+  &::after {
+    @include perfect-center-flex;
+    content: "Now get back to work.";
+    display: flex;
+    font-size: 24px;
+    line-height: 50px;
+    color: white;
+    text-transform: none;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: hide-text 1.5s linear 1s forwards alternate;
+  }
+}

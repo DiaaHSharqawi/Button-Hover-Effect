@@ -1,0 +1,128 @@
+@keyframes button-click {
+  0% {
+    width: 350px;
+    height: 80px;
+  }
+  10% {
+    width: 395px;
+    height: 120px;
+  }
+  20% {
+    width: 440px;
+    height: 160px;
+  }
+  30% {
+    width: 485px;
+    height: 240px;
+  }
+  40% {
+    width: 530px;
+    height: 320px;
+  }
+  /* 
+  This is something new I have learned. 
+  It took a long time to find a way to hold the last state (grey state)
+  which will display the text 
+  */
+  40%, 100% {
+    width: 575px;
+    height: 470px;
+    color: transparent;
+    background-color: #262e31;
+  }
+}
+@keyframes hide-text {
+  0% {
+    opacity: 0;
+  }
+  50%, 90% {
+    opacity: 1;
+    transform: translate(-50%, 1%);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.button-basic, #touchable-button {
+  width: 350px;
+  height: 80px;
+  font-size: 18px;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+#touchable-button {
+  background-color: #ffcd00;
+  color: black;
+  padding: 18px 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 3s linear 3s; /* TO see the scaling effect of button*/
+}
+#touchable-button::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s linear; /* For hover transition */
+  content: "touch me !";
+  width: 350px;
+  height: 80px;
+  background-color: #262e31;
+  color: #ffcd00;
+  position: absolute;
+  transform: translate(10%, -25%);
+  opacity: 0;
+  z-index: 1;
+}
+#touchable-button:focus {
+  animation: button-click 1.5s linear forwards 2 alternate;
+}
+#touchable-button:focus::before {
+  display: none;
+}
+#touchable-button:focus::before {
+  color: #ffcd00;
+  content: "Good boy!";
+  width: 100%;
+  height: auto;
+  font-weight: 400;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  display: flex;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  opacity: 0;
+  animation: hide-text 1.5s linear 1s forwards alternate;
+}
+#touchable-button:focus::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Now get back to work.";
+  display: flex;
+  font-size: 24px;
+  line-height: 50px;
+  color: white;
+  text-transform: none;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: hide-text 1.5s linear 1s forwards alternate;
+}
+#touchable-button:not(:focus):hover::before {
+  position: absolute;
+  transform: translate(0, 0);
+  opacity: 1;
+}/*# sourceMappingURL=button.css.map */
