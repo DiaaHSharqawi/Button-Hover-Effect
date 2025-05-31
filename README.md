@@ -1,48 +1,61 @@
-# Button Hover Effect
+# Bouncing-face
 
-A simple project demonstrating creative button hover effects using CSS and/or SCSS. This repository showcases visually appealing and interactive button styles for web projects.
+This project is a simple web page that demonstrates a bouncing face animation using CSS, SCSS, and HTML.
 
-## Demo
+## Table of Contents
 
-- **Live Demo:** [https://diaahsharqawi.github.io/Button-Hover-Effect/](https://diaahsharqawi.github.io/Button-Hover-Effect/)
+- [Project Description](#project-description)
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-Open `index.html` in your browser to see the button hover effects in action locally.
+## Project Description
 
-## Project Structure
+The "Bouncing-face" project is a fun and interactive web page showcasing a bouncing face animation. This project is designed to demonstrate the use of CSS and SCSS for animations and styling.
 
-- `index.html` - Main HTML file to preview the effects.
-- `css/` - Folder for CSS files containing the styles for the effects.
-- `styles/` - (Optional) Folder for SCSS or additional styling resources.
+## Demo 
 
-## Getting Started
-
-To use or preview the button hover effects:
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/DiaaHSharqawi/Task-7-button-hover.git
-   ```
-2. Open `index.html` in your browser.
-
-## Customization
-
-- Modify the CSS/SCSS files in the `css/` or `styles/` directory to change the appearance or behavior of the button effects.
-- Add new effects by including additional classes or styles as needed.
+Check out the live demo here:  
+🔗 [Live Demo on GitHub Pages](https://diaahsharqawi.github.io/CSS-Bouncing-Face/)
 
 ## Technologies Used
 
-- HTML
-- CSS
-- SCSS (optional)
+- **CSS**.
+- **SCSS**.
+- **HTML**.
+
+## Installation
+
+To get a local copy up and running, follow these simple steps:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/DiaaHSharqawi/Task-8-bouncing-face.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd Task-8-bouncing-face
+   ```
+
+## Usage
+
+Open the `index.html` file in your preferred web browser to view the bouncing face animation.
 
 ## Contributing
 
-Feel free to fork the repository and submit pull requests for new button effects or improvements!
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## License
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This project is open source and available under the [MIT License](LICENSE).
+## Contact
 
----
+Diaa H. Sharqawi - [GitHub Profile](https://github.com/DiaaHSharqawi)
 
-**Author:** DiaaHSharqawi
+Project Link: [Bouncing-face](https://github.com/DiaaHSharqawi/Task-8-bouncing-face)
