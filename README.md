@@ -19,7 +19,7 @@ The "Bouncing-face" project is a fun and interactive web page showcasing a bounc
 ## Demo 
 
 Check out the live demo here:  
-🔗 [Live Demo on GitHub Pages](https://diaahsharqawi.github.io/CSS-Bouncing-Face/)
+🔗 [Live Demo on GitHub Pages](https://itg-software-front-end-internship.github.io/Button-Hover-Effect/)
 
 ## Technologies Used
 
