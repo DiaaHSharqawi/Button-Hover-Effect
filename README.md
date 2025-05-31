@@ -4,7 +4,9 @@ A simple project demonstrating creative button hover effects using CSS and/or SC
 
 ## Demo
 
-Open `index.html` in your browser to see the button hover effects in action.
+- **Live Demo:** [https://diaahsharqawi.github.io/Button-Hover-Effect/](https://diaahsharqawi.github.io/Button-Hover-Effect/)
+
+Open `index.html` in your browser to see the button hover effects in action locally.
 
 ## Project Structure
 
